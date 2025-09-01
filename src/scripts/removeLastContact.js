@@ -5,7 +5,7 @@ export const removeLastContact = async () => {
   try {
     const contacts = await readContacts();
 
-    const newArr = contacts.slice(1, contacts.length - 1);
+    const newArr = contacts.slice(contacts.length - 1);
     await writeContacts(newArr);
   } catch (error) {
     console.error('Помилка при видаленні контакту:', error);
